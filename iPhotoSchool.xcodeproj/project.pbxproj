@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED14604B297850E400A061C1 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14604A297850E400A061C1 /* RemoteDataSource.swift */; };
+		ED14604D2978511B00A061C1 /* MockRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */; };
 		ED5C80642976E368007CBF22 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = ED63BB292976D8EF008351E4 /* lessons.json */; };
 		ED5C80672976F2A1007CBF22 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80662976F2A1007CBF22 /* AppModel.swift */; };
 		ED5C80692976FD64007CBF22 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80682976FD64007CBF22 /* Composer.swift */; };
 		ED5C806E2976FE45007CBF22 /* LessonListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */; };
 		ED5C80712976FF3F007CBF22 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80702976FF3F007CBF22 /* LoadableView.swift */; };
 		ED5C80732977311D007CBF22 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80722977311D007CBF22 /* Async.swift */; };
+		ED5C807529780984007CBF22 /* LessonDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C807429780984007CBF22 /* LessonDetailScreen.swift */; };
+		ED5C807929780CC0007CBF22 /* LessonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C807829780CC0007CBF22 /* LessonItemView.swift */; };
+		ED5C807A29780D19007CBF22 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB272976D8AB008351E4 /* Stub.swift */; };
+		ED5C807D29780FCD007CBF22 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C807C29780FCD007CBF22 /* RemoteImage.swift */; };
+		ED5C807F297812A4007CBF22 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C807E297812A4007CBF22 /* ImageRepository.swift */; };
+		ED5C808129781C22007CBF22 /* RemoteImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C808029781C22007CBF22 /* RemoteImageSource.swift */; };
+		ED5C808329781C2B007CBF22 /* LocalImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C808229781C2B007CBF22 /* LocalImageSource.swift */; };
+		ED5C808529782878007CBF22 /* LocalImageSourceMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C808429782878007CBF22 /* LocalImageSourceMemory.swift */; };
+		ED5C808729782B8F007CBF22 /* LocalImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C808629782B8F007CBF22 /* LocalImageRepository.swift */; };
 		ED63BB032976A644008351E4 /* LessonsRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB022976A644008351E4 /* LessonsRemote.swift */; };
 		ED63BB072976A747008351E4 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB062976A747008351E4 /* Lesson.swift */; };
 		ED63BB092976AB6C008351E4 /* LessonsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB082976AB6C008351E4 /* LessonsRepository.swift */; };
@@ -21,13 +32,11 @@
 		ED63BB102976B7F1008351E4 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB0F2976B7F1008351E4 /* LocalDataSource.swift */; };
 		ED63BB132976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB112976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld */; };
 		ED63BB162976C085008351E4 /* LessonLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB152976C085008351E4 /* LessonLocal.swift */; };
-		ED63BB192976D5F0008351E4 /* CoreDataStackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB182976D5F0008351E4 /* CoreDataStackMock.swift */; };
+		ED63BB192976D5F0008351E4 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB182976D5F0008351E4 /* MockCoreDataStack.swift */; };
 		ED63BB1C2976D607008351E4 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB1B2976D607008351E4 /* Mock.swift */; };
 		ED63BB222976D7AE008351E4 /* LocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB202976D7AE008351E4 /* LocalDataSourceTests.swift */; };
 		ED63BB232976D7AE008351E4 /* LessonsLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB212976D7AE008351E4 /* LessonsLocalDataSourceTests.swift */; };
 		ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB242976D868008351E4 /* TestHelpers.swift */; };
-		ED63BB282976D8AB008351E4 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB272976D8AB008351E4 /* Stub.swift */; };
-		ED63BB2A2976D8EF008351E4 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = ED63BB292976D8EF008351E4 /* lessons.json */; };
 		EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */; };
 		EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */; };
 		EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */; };
@@ -59,11 +68,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED14604A297850E400A061C1 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoteDataSource.swift; path = ../../../../../../../Documents/RemoteDataSource.swift; sourceTree = "<group>"; };
+		ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteDataSource.swift; sourceTree = "<group>"; };
 		ED5C80662976F2A1007CBF22 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		ED5C80682976FD64007CBF22 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 		ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListScreen.swift; sourceTree = "<group>"; };
 		ED5C80702976FF3F007CBF22 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		ED5C80722977311D007CBF22 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		ED5C807429780984007CBF22 /* LessonDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailScreen.swift; sourceTree = "<group>"; };
+		ED5C807829780CC0007CBF22 /* LessonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItemView.swift; sourceTree = "<group>"; };
+		ED5C807C29780FCD007CBF22 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		ED5C807E297812A4007CBF22 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		ED5C808029781C22007CBF22 /* RemoteImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageSource.swift; sourceTree = "<group>"; };
+		ED5C808229781C2B007CBF22 /* LocalImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageSource.swift; sourceTree = "<group>"; };
+		ED5C808429782878007CBF22 /* LocalImageSourceMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageSourceMemory.swift; sourceTree = "<group>"; };
+		ED5C808629782B8F007CBF22 /* LocalImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageRepository.swift; sourceTree = "<group>"; };
 		ED63BB022976A644008351E4 /* LessonsRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRemote.swift; sourceTree = "<group>"; };
 		ED63BB062976A747008351E4 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		ED63BB082976AB6C008351E4 /* LessonsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRepository.swift; sourceTree = "<group>"; };
@@ -72,7 +91,7 @@
 		ED63BB0F2976B7F1008351E4 /* LocalDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		ED63BB122976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iPhotoSchoolModel.xcdatamodel; sourceTree = "<group>"; };
 		ED63BB152976C085008351E4 /* LessonLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLocal.swift; sourceTree = "<group>"; };
-		ED63BB182976D5F0008351E4 /* CoreDataStackMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackMock.swift; sourceTree = "<group>"; };
+		ED63BB182976D5F0008351E4 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
 		ED63BB1B2976D607008351E4 /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		ED63BB202976D7AE008351E4 /* LocalDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataSourceTests.swift; sourceTree = "<group>"; };
 		ED63BB212976D7AE008351E4 /* LessonsLocalDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsLocalDataSourceTests.swift; sourceTree = "<group>"; };
@@ -120,6 +139,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED146048297850AF00A061C1 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				ED146049297850C500A061C1 /* Configuration */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		ED146049297850C500A061C1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ED14604A297850E400A061C1 /* RemoteDataSource.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		ED5C80652976F28B007CBF22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,18 +167,21 @@
 		ED5C806A2976FD9B007CBF22 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				ED5C806F2976FF33007CBF22 /* Shared */,
+				ED5C807629780C9C007CBF22 /* Components */,
 				ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */,
+				ED5C807429780984007CBF22 /* LessonDetailScreen.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		ED5C806F2976FF33007CBF22 /* Shared */ = {
+		ED5C807629780C9C007CBF22 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				ED5C80702976FF3F007CBF22 /* LoadableView.swift */,
+				ED5C807829780CC0007CBF22 /* LessonItemView.swift */,
+				ED5C807C29780FCD007CBF22 /* RemoteImage.swift */,
 			);
-			path = Shared;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		ED63BB012976A5FE008351E4 /* DTO */ = {
@@ -157,18 +195,21 @@
 		ED63BB042976A721008351E4 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				ED63BB052976A72F008351E4 /* Models */,
+				ED63BB052976A72F008351E4 /* DataModels */,
 				ED63BB082976AB6C008351E4 /* LessonsRepository.swift */,
+				ED5C807E297812A4007CBF22 /* ImageRepository.swift */,
+				ED5C808629782B8F007CBF22 /* LocalImageRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		ED63BB052976A72F008351E4 /* Models */ = {
+		ED63BB052976A72F008351E4 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				ED63BB262976D898008351E4 /* Stub */,
 				ED63BB062976A747008351E4 /* Lesson.swift */,
 			);
-			path = Models;
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 		ED63BB0E2976B7E4008351E4 /* Configuration */ = {
@@ -191,9 +232,9 @@
 		ED63BB172976D5E7008351E4 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				ED63BB262976D898008351E4 /* Stub */,
 				ED63BB1A2976D607008351E4 /* Configuration */,
-				ED63BB182976D5F0008351E4 /* CoreDataStackMock.swift */,
+				ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */,
+				ED63BB182976D5F0008351E4 /* MockCoreDataStack.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -210,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				ED63BB1E2976D78B008351E4 /* Local */,
+				ED146048297850AF00A061C1 /* Remote */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -318,6 +360,7 @@
 				ED63BB012976A5FE008351E4 /* DTO */,
 				EDB4DABE2976A1F000F48EE7 /* Configuration */,
 				EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */,
+				ED5C808029781C22007CBF22 /* RemoteImageSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -328,6 +371,8 @@
 				ED63BB142976C07A008351E4 /* DAO */,
 				ED63BB0E2976B7E4008351E4 /* Configuration */,
 				ED63BB0A2976B6BB008351E4 /* LessonsLocalDataSource.swift */,
+				ED5C808229781C2B007CBF22 /* LocalImageSource.swift */,
+				ED5C808429782878007CBF22 /* LocalImageSourceMemory.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -466,7 +511,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED63BB2A2976D8EF008351E4 /* lessons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,22 +529,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED63BB0D2976B725008351E4 /* Loadable.swift in Sources */,
+				ED5C807A29780D19007CBF22 /* Stub.swift in Sources */,
 				ED63BB132976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld in Sources */,
 				ED63BB092976AB6C008351E4 /* LessonsRepository.swift in Sources */,
 				ED63BB032976A644008351E4 /* LessonsRemote.swift in Sources */,
+				ED5C808729782B8F007CBF22 /* LocalImageRepository.swift in Sources */,
 				EDB4DABD2976A14200F48EE7 /* LessonsRemoteDataSource.swift in Sources */,
+				ED5C808329781C2B007CBF22 /* LocalImageSource.swift in Sources */,
 				ED5C806E2976FE45007CBF22 /* LessonListScreen.swift in Sources */,
+				ED5C807529780984007CBF22 /* LessonDetailScreen.swift in Sources */,
 				ED5C80712976FF3F007CBF22 /* LoadableView.swift in Sources */,
 				EDB4DAC12976A20100F48EE7 /* RemoteCall.swift in Sources */,
 				ED63BB102976B7F1008351E4 /* LocalDataSource.swift in Sources */,
 				EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */,
+				ED5C807929780CC0007CBF22 /* LessonItemView.swift in Sources */,
+				ED5C808529782878007CBF22 /* LocalImageSourceMemory.swift in Sources */,
 				ED5C80692976FD64007CBF22 /* Composer.swift in Sources */,
+				ED5C808129781C22007CBF22 /* RemoteImageSource.swift in Sources */,
 				EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */,
 				EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */,
 				ED5C80672976F2A1007CBF22 /* AppModel.swift in Sources */,
 				ED63BB162976C085008351E4 /* LessonLocal.swift in Sources */,
 				EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */,
+				ED5C807F297812A4007CBF22 /* ImageRepository.swift in Sources */,
 				ED5C80732977311D007CBF22 /* Async.swift in Sources */,
+				ED5C807D29780FCD007CBF22 /* RemoteImage.swift in Sources */,
 				ED63BB0B2976B6BB008351E4 /* LessonsLocalDataSource.swift in Sources */,
 				ED63BB072976A747008351E4 /* Lesson.swift in Sources */,
 			);
@@ -510,13 +563,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED63BB282976D8AB008351E4 /* Stub.swift in Sources */,
 				EDB4DAA129769E1F00F48EE7 /* iPhotoSchoolTests.swift in Sources */,
-				ED63BB192976D5F0008351E4 /* CoreDataStackMock.swift in Sources */,
+				ED14604B297850E400A061C1 /* RemoteDataSource.swift in Sources */,
+				ED63BB192976D5F0008351E4 /* MockCoreDataStack.swift in Sources */,
 				ED63BB1C2976D607008351E4 /* Mock.swift in Sources */,
 				ED63BB232976D7AE008351E4 /* LessonsLocalDataSourceTests.swift in Sources */,
 				ED63BB222976D7AE008351E4 /* LocalDataSourceTests.swift in Sources */,
 				ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */,
+				ED14604D2978511B00A061C1 /* MockRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,9 +724,11 @@
 				DEVELOPMENT_TEAM = UZJUVD46BF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -699,9 +755,11 @@
 				DEVELOPMENT_TEAM = UZJUVD46BF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

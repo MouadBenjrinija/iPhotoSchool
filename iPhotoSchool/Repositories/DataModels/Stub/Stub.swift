@@ -6,9 +6,6 @@
 //
 
 import Foundation
-@testable import iPhotoSchool
-
-let LESSON_STUB = (try! Stub.loadJson(of: LessonsListApiModel.self , for: .lessons)).lessons!
 
 struct Stub {
   static func loadJson<T: Decodable>(of type: T.Type,

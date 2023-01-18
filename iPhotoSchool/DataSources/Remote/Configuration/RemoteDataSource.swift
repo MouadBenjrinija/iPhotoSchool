@@ -23,17 +23,6 @@ extension RemoteDataSource {
       return Fail<Value, Error>(error: error).eraseToAnyPublisher()
     }
   }
-
-  func loadData(endpoint: RemoteCall) -> AnyPublisher<Data, Error> {
-    do {
-      let request = try endpoint.request()
-      return session
-        .dataTaskPublisher(for: request)
-        .mapData()
-    } catch let error {
-      return Fail<Data, Error>(error: error).eraseToAnyPublisher()
-    }
-  }
 }
 
 extension Publisher where Output == URLSession.DataTaskPublisher.Output {

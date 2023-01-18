@@ -17,4 +17,15 @@ struct Composer {
       lessonsLocalDataSource: lessonsLocalDataSource)
     return AppModel(lessonRepository: lessonsRepository)
   }
+
+  static func imageRepository() -> ImageRepository {
+    let localImageSourceDisk = LocaLImageSourceDisk()
+    let localImageSourceCache = LocalImageSourceMemory()
+    let localImageRepository = LocalImageRepository(diskSource: localImageSourceDisk,
+                                                cacheSource: localImageSourceCache)
+    let remoteImageSource = RemoteImageSourceMain(session: .default)
+    let imageRepository = ImageRepositoryMain(localImageSource: localImageRepository,
+                                              remoteImageSource: remoteImageSource)
+    return imageRepository
+  }
 }

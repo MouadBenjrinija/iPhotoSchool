@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Lesson: Equatable, Identifiable {
+struct Lesson: Equatable, Identifiable, Hashable {
   let id: Int?
   let name: String?
   let description: String?

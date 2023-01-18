@@ -12,7 +12,7 @@ enum Loadable<T> {
   case notLoaded
   case loading(latest: T?)
   case failed(error: Error)
-  case loaded(value: T, source: DataSource)
+  case loaded(value: T, source: DataSource? = nil)
 
   var value: T? {
     switch self {

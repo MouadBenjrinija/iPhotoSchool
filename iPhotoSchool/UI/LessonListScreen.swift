@@ -10,14 +10,22 @@ import Combine
 
 struct LessonListScreen: View {
   @ObservedObject var model: AppModel
+  @State var lessonDetailPath: [Lesson] = []
 
   var body: some View {
-    VStack {
+    NavigationStack(path: $lessonDetailPath) {
       LoadableView(loadable: model.lessons) { lessons in
         List(lessons) { lesson in
-          Text(lesson.name ?? "--")
-        }
-      }.task {
+          NavigationLink(value: lesson) {
+            LessonItemView(lesson: lesson)
+          }.foregroundColor(.accentColor)
+        }.listStyle(.plain)
+      }
+      .navigationTitle("Lessons")
+      .navigationDestination(for: Lesson.self) { lesson in
+        LessonDetailScreen()
+      }
+      .task {
         await model.loadLessons()
       }
     }
