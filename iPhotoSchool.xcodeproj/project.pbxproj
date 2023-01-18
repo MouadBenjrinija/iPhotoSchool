@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED5C80642976E368007CBF22 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = ED63BB292976D8EF008351E4 /* lessons.json */; };
+		ED5C80672976F2A1007CBF22 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80662976F2A1007CBF22 /* AppModel.swift */; };
+		ED5C80692976FD64007CBF22 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80682976FD64007CBF22 /* Composer.swift */; };
+		ED5C806E2976FE45007CBF22 /* LessonListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */; };
+		ED5C80712976FF3F007CBF22 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80702976FF3F007CBF22 /* LoadableView.swift */; };
+		ED5C80732977311D007CBF22 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80722977311D007CBF22 /* Async.swift */; };
+		ED63BB032976A644008351E4 /* LessonsRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB022976A644008351E4 /* LessonsRemote.swift */; };
+		ED63BB072976A747008351E4 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB062976A747008351E4 /* Lesson.swift */; };
+		ED63BB092976AB6C008351E4 /* LessonsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB082976AB6C008351E4 /* LessonsRepository.swift */; };
+		ED63BB0B2976B6BB008351E4 /* LessonsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB0A2976B6BB008351E4 /* LessonsLocalDataSource.swift */; };
+		ED63BB0D2976B725008351E4 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB0C2976B725008351E4 /* Loadable.swift */; };
+		ED63BB102976B7F1008351E4 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB0F2976B7F1008351E4 /* LocalDataSource.swift */; };
+		ED63BB132976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB112976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld */; };
+		ED63BB162976C085008351E4 /* LessonLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB152976C085008351E4 /* LessonLocal.swift */; };
+		ED63BB192976D5F0008351E4 /* CoreDataStackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB182976D5F0008351E4 /* CoreDataStackMock.swift */; };
+		ED63BB1C2976D607008351E4 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB1B2976D607008351E4 /* Mock.swift */; };
+		ED63BB222976D7AE008351E4 /* LocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB202976D7AE008351E4 /* LocalDataSourceTests.swift */; };
+		ED63BB232976D7AE008351E4 /* LessonsLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB212976D7AE008351E4 /* LessonsLocalDataSourceTests.swift */; };
+		ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB242976D868008351E4 /* TestHelpers.swift */; };
+		ED63BB282976D8AB008351E4 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB272976D8AB008351E4 /* Stub.swift */; };
+		ED63BB2A2976D8EF008351E4 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = ED63BB292976D8EF008351E4 /* lessons.json */; };
+		EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */; };
+		EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */; };
+		EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */; };
+		EDB4DAA129769E1F00F48EE7 /* iPhotoSchoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAA029769E1F00F48EE7 /* iPhotoSchoolTests.swift */; };
+		EDB4DAAB29769E1F00F48EE7 /* iPhotoSchoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */; };
+		EDB4DAAD29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */; };
+		EDB4DABD2976A14200F48EE7 /* LessonsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */; };
+		EDB4DAC12976A20100F48EE7 /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DABF2976A20100F48EE7 /* RemoteCall.swift */; };
+		EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */; };
+		EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC42976A28300F48EE7 /* Constants.swift */; };
+		EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC62976A34000F48EE7 /* Authentication.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDB4DA9D29769E1F00F48EE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB4DA7F29769E1C00F48EE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB4DA8629769E1C00F48EE7;
+			remoteInfo = iPhotoSchool;
+		};
+		EDB4DAA729769E1F00F48EE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB4DA7F29769E1C00F48EE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB4DA8629769E1C00F48EE7;
+			remoteInfo = iPhotoSchool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED5C80662976F2A1007CBF22 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		ED5C80682976FD64007CBF22 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
+		ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListScreen.swift; sourceTree = "<group>"; };
+		ED5C80702976FF3F007CBF22 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		ED5C80722977311D007CBF22 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		ED63BB022976A644008351E4 /* LessonsRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRemote.swift; sourceTree = "<group>"; };
+		ED63BB062976A747008351E4 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		ED63BB082976AB6C008351E4 /* LessonsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRepository.swift; sourceTree = "<group>"; };
+		ED63BB0A2976B6BB008351E4 /* LessonsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsLocalDataSource.swift; sourceTree = "<group>"; };
+		ED63BB0C2976B725008351E4 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		ED63BB0F2976B7F1008351E4 /* LocalDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		ED63BB122976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iPhotoSchoolModel.xcdatamodel; sourceTree = "<group>"; };
+		ED63BB152976C085008351E4 /* LessonLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLocal.swift; sourceTree = "<group>"; };
+		ED63BB182976D5F0008351E4 /* CoreDataStackMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackMock.swift; sourceTree = "<group>"; };
+		ED63BB1B2976D607008351E4 /* Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		ED63BB202976D7AE008351E4 /* LocalDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataSourceTests.swift; sourceTree = "<group>"; };
+		ED63BB212976D7AE008351E4 /* LessonsLocalDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsLocalDataSourceTests.swift; sourceTree = "<group>"; };
+		ED63BB242976D868008351E4 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		ED63BB272976D8AB008351E4 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		ED63BB292976D8EF008351E4 /* lessons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
+		EDB4DA8729769E1C00F48EE7 /* iPhotoSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhotoSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolApp.swift; sourceTree = "<group>"; };
+		EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB4DAA029769E1F00F48EE7 /* iPhotoSchoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolTests.swift; sourceTree = "<group>"; };
+		EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoSchoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolUITests.swift; sourceTree = "<group>"; };
+		EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRemoteDataSource.swift; sourceTree = "<group>"; };
+		EDB4DABF2976A20100F48EE7 /* RemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
+		EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		EDB4DAC42976A28300F48EE7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EDB4DAC62976A34000F48EE7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDB4DA8429769E1C00F48EE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4DA9929769E1F00F48EE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4DAA329769E1F00F48EE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED5C80652976F28B007CBF22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED5C80662976F2A1007CBF22 /* AppModel.swift */,
+				ED5C80682976FD64007CBF22 /* Composer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED5C806A2976FD9B007CBF22 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ED5C806F2976FF33007CBF22 /* Shared */,
+				ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		ED5C806F2976FF33007CBF22 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ED5C80702976FF3F007CBF22 /* LoadableView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		ED63BB012976A5FE008351E4 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB022976A644008351E4 /* LessonsRemote.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		ED63BB042976A721008351E4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB052976A72F008351E4 /* Models */,
+				ED63BB082976AB6C008351E4 /* LessonsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		ED63BB052976A72F008351E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB062976A747008351E4 /* Lesson.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED63BB0E2976B7E4008351E4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB0F2976B7F1008351E4 /* LocalDataSource.swift */,
+				ED63BB112976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		ED63BB142976C07A008351E4 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB152976C085008351E4 /* LessonLocal.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		ED63BB172976D5E7008351E4 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB262976D898008351E4 /* Stub */,
+				ED63BB1A2976D607008351E4 /* Configuration */,
+				ED63BB182976D5F0008351E4 /* CoreDataStackMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		ED63BB1A2976D607008351E4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB1B2976D607008351E4 /* Mock.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		ED63BB1D2976D763008351E4 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB1E2976D78B008351E4 /* Local */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		ED63BB1E2976D78B008351E4 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB1F2976D7AE008351E4 /* Configuration */,
+				ED63BB212976D7AE008351E4 /* LessonsLocalDataSourceTests.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		ED63BB1F2976D7AE008351E4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB202976D7AE008351E4 /* LocalDataSourceTests.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		ED63BB262976D898008351E4 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB292976D8EF008351E4 /* lessons.json */,
+				ED63BB272976D8AB008351E4 /* Stub.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		EDB4DA7E29769E1C00F48EE7 = {
+			isa = PBXGroup;
+			children = (
+				EDB4DA8929769E1C00F48EE7 /* iPhotoSchool */,
+				EDB4DA9F29769E1F00F48EE7 /* iPhotoSchoolTests */,
+				EDB4DAA929769E1F00F48EE7 /* iPhotoSchoolUITests */,
+				EDB4DA8829769E1C00F48EE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDB4DA8829769E1C00F48EE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DA8729769E1C00F48EE7 /* iPhotoSchool.app */,
+				EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */,
+				EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDB4DA8929769E1C00F48EE7 /* iPhotoSchool */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DAC32976A27A00F48EE7 /* Util */,
+				EDB4DAB92976A10700F48EE7 /* DataSources */,
+				ED63BB042976A721008351E4 /* Repositories */,
+				ED5C80652976F28B007CBF22 /* Model */,
+				ED5C806A2976FD9B007CBF22 /* UI */,
+				EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */,
+				EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */,
+				EDB4DA9029769E1E00F48EE7 /* Preview Content */,
+			);
+			path = iPhotoSchool;
+			sourceTree = "<group>";
+		};
+		EDB4DA9029769E1E00F48EE7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDB4DA9F29769E1F00F48EE7 /* iPhotoSchoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB172976D5E7008351E4 /* Mock */,
+				ED63BB1D2976D763008351E4 /* DataSources */,
+				EDB4DAA029769E1F00F48EE7 /* iPhotoSchoolTests.swift */,
+				ED63BB242976D868008351E4 /* TestHelpers.swift */,
+			);
+			path = iPhotoSchoolTests;
+			sourceTree = "<group>";
+		};
+		EDB4DAA929769E1F00F48EE7 /* iPhotoSchoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */,
+				EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */,
+			);
+			path = iPhotoSchoolUITests;
+			sourceTree = "<group>";
+		};
+		EDB4DAB92976A10700F48EE7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DABB2976A13400F48EE7 /* Local */,
+				EDB4DABA2976A12800F48EE7 /* Remote */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		EDB4DABA2976A12800F48EE7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB012976A5FE008351E4 /* DTO */,
+				EDB4DABE2976A1F000F48EE7 /* Configuration */,
+				EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		EDB4DABB2976A13400F48EE7 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				ED63BB142976C07A008351E4 /* DAO */,
+				ED63BB0E2976B7E4008351E4 /* Configuration */,
+				ED63BB0A2976B6BB008351E4 /* LessonsLocalDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		EDB4DABE2976A1F000F48EE7 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DABF2976A20100F48EE7 /* RemoteCall.swift */,
+				EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */,
+				EDB4DAC62976A34000F48EE7 /* Authentication.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EDB4DAC32976A27A00F48EE7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4DAC42976A28300F48EE7 /* Constants.swift */,
+				ED63BB0C2976B725008351E4 /* Loadable.swift */,
+				ED5C80722977311D007CBF22 /* Async.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB4DAB029769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchool" */;
+			buildPhases = (
+				EDB4DA8329769E1C00F48EE7 /* Sources */,
+				EDB4DA8429769E1C00F48EE7 /* Frameworks */,
+				EDB4DA8529769E1C00F48EE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPhotoSchool;
+			productName = iPhotoSchool;
+			productReference = EDB4DA8729769E1C00F48EE7 /* iPhotoSchool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDB4DA9B29769E1F00F48EE7 /* iPhotoSchoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB4DAB329769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchoolTests" */;
+			buildPhases = (
+				EDB4DA9829769E1F00F48EE7 /* Sources */,
+				EDB4DA9929769E1F00F48EE7 /* Frameworks */,
+				EDB4DA9A29769E1F00F48EE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB4DA9E29769E1F00F48EE7 /* PBXTargetDependency */,
+			);
+			name = iPhotoSchoolTests;
+			productName = iPhotoSchoolTests;
+			productReference = EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDB4DAA529769E1F00F48EE7 /* iPhotoSchoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB4DAB629769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchoolUITests" */;
+			buildPhases = (
+				EDB4DAA229769E1F00F48EE7 /* Sources */,
+				EDB4DAA329769E1F00F48EE7 /* Frameworks */,
+				EDB4DAA429769E1F00F48EE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB4DAA829769E1F00F48EE7 /* PBXTargetDependency */,
+			);
+			name = iPhotoSchoolUITests;
+			productName = iPhotoSchoolUITests;
+			productReference = EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDB4DA7F29769E1C00F48EE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					EDB4DA8629769E1C00F48EE7 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					EDB4DA9B29769E1F00F48EE7 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = EDB4DA8629769E1C00F48EE7;
+					};
+					EDB4DAA529769E1F00F48EE7 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = EDB4DA8629769E1C00F48EE7;
+					};
+				};
+			};
+			buildConfigurationList = EDB4DA8229769E1C00F48EE7 /* Build configuration list for PBXProject "iPhotoSchool" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDB4DA7E29769E1C00F48EE7;
+			productRefGroup = EDB4DA8829769E1C00F48EE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */,
+				EDB4DA9B29769E1F00F48EE7 /* iPhotoSchoolTests */,
+				EDB4DAA529769E1F00F48EE7 /* iPhotoSchoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDB4DA8529769E1C00F48EE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */,
+				EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */,
+				ED5C80642976E368007CBF22 /* lessons.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4DA9A29769E1F00F48EE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED63BB2A2976D8EF008351E4 /* lessons.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4DAA429769E1F00F48EE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDB4DA8329769E1C00F48EE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED63BB0D2976B725008351E4 /* Loadable.swift in Sources */,
+				ED63BB132976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld in Sources */,
+				ED63BB092976AB6C008351E4 /* LessonsRepository.swift in Sources */,
+				ED63BB032976A644008351E4 /* LessonsRemote.swift in Sources */,
+				EDB4DABD2976A14200F48EE7 /* LessonsRemoteDataSource.swift in Sources */,
+				ED5C806E2976FE45007CBF22 /* LessonListScreen.swift in Sources */,
+				ED5C80712976FF3F007CBF22 /* LoadableView.swift in Sources */,
+				EDB4DAC12976A20100F48EE7 /* RemoteCall.swift in Sources */,
+				ED63BB102976B7F1008351E4 /* LocalDataSource.swift in Sources */,
+				EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */,
+				ED5C80692976FD64007CBF22 /* Composer.swift in Sources */,
+				EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */,
+				EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */,
+				ED5C80672976F2A1007CBF22 /* AppModel.swift in Sources */,
+				ED63BB162976C085008351E4 /* LessonLocal.swift in Sources */,
+				EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */,
+				ED5C80732977311D007CBF22 /* Async.swift in Sources */,
+				ED63BB0B2976B6BB008351E4 /* LessonsLocalDataSource.swift in Sources */,
+				ED63BB072976A747008351E4 /* Lesson.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4DA9829769E1F00F48EE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED63BB282976D8AB008351E4 /* Stub.swift in Sources */,
+				EDB4DAA129769E1F00F48EE7 /* iPhotoSchoolTests.swift in Sources */,
+				ED63BB192976D5F0008351E4 /* CoreDataStackMock.swift in Sources */,
+				ED63BB1C2976D607008351E4 /* Mock.swift in Sources */,
+				ED63BB232976D7AE008351E4 /* LessonsLocalDataSourceTests.swift in Sources */,
+				ED63BB222976D7AE008351E4 /* LocalDataSourceTests.swift in Sources */,
+				ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB4DAA229769E1F00F48EE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB4DAAB29769E1F00F48EE7 /* iPhotoSchoolUITests.swift in Sources */,
+				EDB4DAAD29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDB4DA9E29769E1F00F48EE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */;
+			targetProxy = EDB4DA9D29769E1F00F48EE7 /* PBXContainerItemProxy */;
+		};
+		EDB4DAA829769E1F00F48EE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */;
+			targetProxy = EDB4DAA729769E1F00F48EE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDB4DAAE29769E1F00F48EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDB4DAAF29769E1F00F48EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDB4DAB129769E1F00F48EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iPhotoSchool/Preview Content\"";
+				DEVELOPMENT_TEAM = UZJUVD46BF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDB4DAB229769E1F00F48EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iPhotoSchool/Preview Content\"";
+				DEVELOPMENT_TEAM = UZJUVD46BF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDB4DAB429769E1F00F48EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZJUVD46BF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhotoSchool.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iPhotoSchool";
+			};
+			name = Debug;
+		};
+		EDB4DAB529769E1F00F48EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZJUVD46BF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhotoSchool.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iPhotoSchool";
+			};
+			name = Release;
+		};
+		EDB4DAB729769E1F00F48EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZJUVD46BF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPhotoSchool;
+			};
+			name = Debug;
+		};
+		EDB4DAB829769E1F00F48EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZJUVD46BF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPhotoSchool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDB4DA8229769E1C00F48EE7 /* Build configuration list for PBXProject "iPhotoSchool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB4DAAE29769E1F00F48EE7 /* Debug */,
+				EDB4DAAF29769E1F00F48EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB4DAB029769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB4DAB129769E1F00F48EE7 /* Debug */,
+				EDB4DAB229769E1F00F48EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB4DAB329769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB4DAB429769E1F00F48EE7 /* Debug */,
+				EDB4DAB529769E1F00F48EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB4DAB629769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB4DAB729769E1F00F48EE7 /* Debug */,
+				EDB4DAB829769E1F00F48EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED63BB112976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED63BB122976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodel */,
+			);
+			currentVersion = ED63BB122976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodel */;
+			path = iPhotoSchoolModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EDB4DA7F29769E1C00F48EE7 /* Project object */;
+}
