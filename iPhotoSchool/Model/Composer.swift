@@ -5,7 +5,7 @@
 //  Created by MOUAD BENJRINIJA on 17/1/2023.
 //
 
-import Foundation
+import Foundation 
 
 struct Composer {
   @MainActor
@@ -28,4 +28,13 @@ struct Composer {
                                               remoteImageSource: remoteImageSource)
     return imageRepository
   }
+
+  static func videoRepository() -> VideoRepository {
+    let remoteVideoSource = RemoteVideoSourceMain()
+    let localVideoSource = LocalVideoSourceMain()
+    let videoRepository = VideoRepositoryMain(remoteSource: remoteVideoSource,
+                                              localSource: localVideoSource)
+    return videoRepository
+  }
+
 }

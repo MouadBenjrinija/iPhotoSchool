@@ -28,6 +28,7 @@ struct LessonItemView: View {
         .fontWeight(.medium)
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.leading, 4)
     }
   }
 }

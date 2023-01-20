@@ -23,12 +23,26 @@ struct LessonListScreen: View {
       }
       .navigationTitle("Lessons")
       .navigationDestination(for: Lesson.self) { lesson in
-        LessonDetailScreen()
+        LessonDetailScreen(lesson: lesson, onNext: onNext(lesson: lesson))
+          .navigationBarTitleDisplayMode(.inline)
       }
       .task {
         await model.loadLessons()
       }
     }
+  }
+
+  func next(lesson: Lesson) -> Lesson? {
+    if let lessons = model.lessons.value,
+       let lessonIndex = lessons.firstIndex(of: lesson),
+       lessonIndex < (lessons.count - 1) {
+      return lessons[lessonIndex + 1]
+    } else { return nil }
+  }
+
+  func onNext(lesson: Lesson) -> (() -> Void)? {
+    guard let nextLesson = next(lesson: lesson) else { return nil }
+    return { lessonDetailPath = [nextLesson] }
   }
 
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		ED14604B297850E400A061C1 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14604A297850E400A061C1 /* RemoteDataSource.swift */; };
 		ED14604D2978511B00A061C1 /* MockRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */; };
+		ED1460522978554300A061C1 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1460502978554300A061C1 /* LessonDetailViewController.swift */; };
+		ED1460532978554300A061C1 /* LessonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1460512978554300A061C1 /* LessonDetailViewController.xib */; };
+		ED1460562978873700A061C1 /* LocalVideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1460552978873700A061C1 /* LocalVideoSource.swift */; };
 		ED5C80642976E368007CBF22 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = ED63BB292976D8EF008351E4 /* lessons.json */; };
 		ED5C80672976F2A1007CBF22 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80662976F2A1007CBF22 /* AppModel.swift */; };
 		ED5C80692976FD64007CBF22 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C80682976FD64007CBF22 /* Composer.swift */; };
@@ -37,6 +40,11 @@
 		ED63BB222976D7AE008351E4 /* LocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB202976D7AE008351E4 /* LocalDataSourceTests.swift */; };
 		ED63BB232976D7AE008351E4 /* LessonsLocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB212976D7AE008351E4 /* LessonsLocalDataSourceTests.swift */; };
 		ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63BB242976D868008351E4 /* TestHelpers.swift */; };
+		ED77DD722979AFE300A3B242 /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77DD712979AFE300A3B242 /* VideoRepository.swift */; };
+		ED77DD742979B19B00A3B242 /* RemoteVideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77DD732979B19B00A3B242 /* RemoteVideoSource.swift */; };
+		ED77DD762979E3BD00A3B242 /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77DD752979E3BD00A3B242 /* DownloadButton.swift */; };
+		ED77DD7A297AA30000A3B242 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77DD79297AA30000A3B242 /* LoadingButton.swift */; };
+		ED77DD7C297AA55900A3B242 /* LessonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED77DD7B297AA55900A3B242 /* LessonDetailViewModel.swift */; };
 		EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */; };
 		EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */; };
 		EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */; };
@@ -70,6 +78,9 @@
 /* Begin PBXFileReference section */
 		ED14604A297850E400A061C1 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RemoteDataSource.swift; path = ../../../../../../../Documents/RemoteDataSource.swift; sourceTree = "<group>"; };
 		ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteDataSource.swift; sourceTree = "<group>"; };
+		ED1460502978554300A061C1 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
+		ED1460512978554300A061C1 /* LessonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonDetailViewController.xib; sourceTree = "<group>"; };
+		ED1460552978873700A061C1 /* LocalVideoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoSource.swift; sourceTree = "<group>"; };
 		ED5C80662976F2A1007CBF22 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		ED5C80682976FD64007CBF22 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 		ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListScreen.swift; sourceTree = "<group>"; };
@@ -98,6 +109,11 @@
 		ED63BB242976D868008351E4 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		ED63BB272976D8AB008351E4 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		ED63BB292976D8EF008351E4 /* lessons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
+		ED77DD712979AFE300A3B242 /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
+		ED77DD732979B19B00A3B242 /* RemoteVideoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVideoSource.swift; sourceTree = "<group>"; };
+		ED77DD752979E3BD00A3B242 /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
+		ED77DD79297AA30000A3B242 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		ED77DD7B297AA55900A3B242 /* LessonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModel.swift; sourceTree = "<group>"; };
 		EDB4DA8729769E1C00F48EE7 /* iPhotoSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhotoSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolApp.swift; sourceTree = "<group>"; };
 		EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +171,33 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		ED14604E297854D900A061C1 /* LessonsList */ = {
+			isa = PBXGroup;
+			children = (
+				ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */,
+			);
+			path = LessonsList;
+			sourceTree = "<group>";
+		};
+		ED14604F297854EA00A061C1 /* LessonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				ED1460542978554800A061C1 /* ViewController */,
+				ED5C807429780984007CBF22 /* LessonDetailScreen.swift */,
+			);
+			path = LessonDetails;
+			sourceTree = "<group>";
+		};
+		ED1460542978554800A061C1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED1460502978554300A061C1 /* LessonDetailViewController.swift */,
+				ED1460512978554300A061C1 /* LessonDetailViewController.xib */,
+				ED77DD7B297AA55900A3B242 /* LessonDetailViewModel.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		ED5C80652976F28B007CBF22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				ED5C807629780C9C007CBF22 /* Components */,
-				ED5C806D2976FE45007CBF22 /* LessonListScreen.swift */,
-				ED5C807429780984007CBF22 /* LessonDetailScreen.swift */,
+				ED14604E297854D900A061C1 /* LessonsList */,
+				ED14604F297854EA00A061C1 /* LessonDetails */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -177,6 +220,7 @@
 		ED5C807629780C9C007CBF22 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED77DD78297AA2F000A3B242 /* DownloadButton */,
 				ED5C80702976FF3F007CBF22 /* LoadableView.swift */,
 				ED5C807829780CC0007CBF22 /* LessonItemView.swift */,
 				ED5C807C29780FCD007CBF22 /* RemoteImage.swift */,
@@ -199,6 +243,7 @@
 				ED63BB082976AB6C008351E4 /* LessonsRepository.swift */,
 				ED5C807E297812A4007CBF22 /* ImageRepository.swift */,
 				ED5C808629782B8F007CBF22 /* LocalImageRepository.swift */,
+				ED77DD712979AFE300A3B242 /* VideoRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -282,6 +327,15 @@
 			path = Stub;
 			sourceTree = "<group>";
 		};
+		ED77DD78297AA2F000A3B242 /* DownloadButton */ = {
+			isa = PBXGroup;
+			children = (
+				ED77DD752979E3BD00A3B242 /* DownloadButton.swift */,
+				ED77DD79297AA30000A3B242 /* LoadingButton.swift */,
+			);
+			path = DownloadButton;
+			sourceTree = "<group>";
+		};
 		EDB4DA7E29769E1C00F48EE7 = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +415,7 @@
 				EDB4DABE2976A1F000F48EE7 /* Configuration */,
 				EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */,
 				ED5C808029781C22007CBF22 /* RemoteImageSource.swift */,
+				ED77DD732979B19B00A3B242 /* RemoteVideoSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -373,6 +428,7 @@
 				ED63BB0A2976B6BB008351E4 /* LessonsLocalDataSource.swift */,
 				ED5C808229781C2B007CBF22 /* LocalImageSource.swift */,
 				ED5C808429782878007CBF22 /* LocalImageSourceMemory.swift */,
+				ED1460552978873700A061C1 /* LocalVideoSource.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -502,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */,
+				ED1460532978554300A061C1 /* LessonDetailViewController.xib in Resources */,
 				EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */,
 				ED5C80642976E368007CBF22 /* lessons.json in Resources */,
 			);
@@ -528,26 +585,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1460562978873700A061C1 /* LocalVideoSource.swift in Sources */,
 				ED63BB0D2976B725008351E4 /* Loadable.swift in Sources */,
 				ED5C807A29780D19007CBF22 /* Stub.swift in Sources */,
 				ED63BB132976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld in Sources */,
 				ED63BB092976AB6C008351E4 /* LessonsRepository.swift in Sources */,
 				ED63BB032976A644008351E4 /* LessonsRemote.swift in Sources */,
 				ED5C808729782B8F007CBF22 /* LocalImageRepository.swift in Sources */,
+				ED77DD722979AFE300A3B242 /* VideoRepository.swift in Sources */,
 				EDB4DABD2976A14200F48EE7 /* LessonsRemoteDataSource.swift in Sources */,
 				ED5C808329781C2B007CBF22 /* LocalImageSource.swift in Sources */,
+				ED77DD7A297AA30000A3B242 /* LoadingButton.swift in Sources */,
 				ED5C806E2976FE45007CBF22 /* LessonListScreen.swift in Sources */,
 				ED5C807529780984007CBF22 /* LessonDetailScreen.swift in Sources */,
 				ED5C80712976FF3F007CBF22 /* LoadableView.swift in Sources */,
 				EDB4DAC12976A20100F48EE7 /* RemoteCall.swift in Sources */,
+				ED1460522978554300A061C1 /* LessonDetailViewController.swift in Sources */,
 				ED63BB102976B7F1008351E4 /* LocalDataSource.swift in Sources */,
 				EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */,
 				ED5C807929780CC0007CBF22 /* LessonItemView.swift in Sources */,
 				ED5C808529782878007CBF22 /* LocalImageSourceMemory.swift in Sources */,
+				ED77DD762979E3BD00A3B242 /* DownloadButton.swift in Sources */,
+				ED77DD742979B19B00A3B242 /* RemoteVideoSource.swift in Sources */,
 				ED5C80692976FD64007CBF22 /* Composer.swift in Sources */,
 				ED5C808129781C22007CBF22 /* RemoteImageSource.swift in Sources */,
 				EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */,
 				EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */,
+				ED77DD7C297AA55900A3B242 /* LessonDetailViewModel.swift in Sources */,
 				ED5C80672976F2A1007CBF22 /* AppModel.swift in Sources */,
 				ED63BB162976C085008351E4 /* LessonLocal.swift in Sources */,
 				EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */,
