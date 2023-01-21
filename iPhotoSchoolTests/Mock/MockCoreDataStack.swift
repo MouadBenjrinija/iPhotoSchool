@@ -16,7 +16,6 @@ class CoreDataStackMock: LocalDataSource, Mock {
   }
   enum Action: Equatable {
     case fetch(String, ContextSnapshot)
-    case insert(String, ContextSnapshot)
     case update(String, ContextSnapshot)
   }
 
@@ -41,17 +40,18 @@ class CoreDataStackMock: LocalDataSource, Mock {
     }
   }
 
-  func update<Result>(_ operation: @escaping DBOperation<Result>)
-        -> AnyPublisher<Result, Error> {
+  func update<T: Persistable>(_ operation: @escaping DBOperation<[T]>)
+      -> AnyPublisher<[T], Error> {
     do {
       let context = container.viewContext
       context.reset()
       let result = try operation(context)
+      self.record(action: .update("\(T.WrappedType.self)", context.snapshot))
       try context.save()
       context.reset()
       return Just(result).setFailureType(to: Error.self).eraseToAnyPublisher()
     } catch {
-      return Fail<Result, Error>(error: error).eraseToAnyPublisher()
+      return Fail<[T], Error>(error: error).eraseToAnyPublisher()
     }
   }
 
@@ -60,7 +60,6 @@ class CoreDataStackMock: LocalDataSource, Mock {
       let result = try objects
         .map { try $0.insert(in: context) }
         .map(T.init(managedObject:))
-      self.record(action: .insert("\(T.WrappedType.self)", context.snapshot))
       return result
     }
   }

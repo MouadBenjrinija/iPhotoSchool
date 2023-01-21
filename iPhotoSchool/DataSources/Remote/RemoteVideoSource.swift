@@ -19,9 +19,8 @@ class RemoteVideoSourceMain: RemoteVideoSource {
   var downloadTask: URLSessionDownloadTask?
   var observation: NSKeyValueObservation?
 
-  init() {
-    let config = URLSessionConfiguration.default
-    session = URLSession(configuration: config, delegate: nil, delegateQueue: OperationQueue())
+  init(session: URLSession = .default) {
+    self.session = session
   }
 
   func downloadVideo(from url: URL?) -> AnyPublisher<DownloadStatus, Error> {
@@ -58,7 +57,7 @@ class RemoteVideoSourceMain: RemoteVideoSource {
 
 }
 
-enum DownloadStatus {
+enum DownloadStatus: Equatable {
   case downloading(progress: Int)
   case finished(localURL: URL)
 }

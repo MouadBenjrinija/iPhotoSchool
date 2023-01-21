@@ -48,7 +48,6 @@
 		EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */; };
 		EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */; };
 		EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */; };
-		EDB4DAA129769E1F00F48EE7 /* iPhotoSchoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAA029769E1F00F48EE7 /* iPhotoSchoolTests.swift */; };
 		EDB4DAAB29769E1F00F48EE7 /* iPhotoSchoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */; };
 		EDB4DAAD29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */; };
 		EDB4DABD2976A14200F48EE7 /* LessonsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */; };
@@ -56,6 +55,8 @@
 		EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */; };
 		EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC42976A28300F48EE7 /* Constants.swift */; };
 		EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC62976A34000F48EE7 /* Authentication.swift */; };
+		EDE9FEEB297B336B00E497A9 /* LessonDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */; };
+		EDE9FEED297B33DB00E497A9 /* MockVideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +120,6 @@
 		EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDB4DAA029769E1F00F48EE7 /* iPhotoSchoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolTests.swift; sourceTree = "<group>"; };
 		EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoSchoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolUITests.swift; sourceTree = "<group>"; };
 		EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -128,6 +128,8 @@
 		EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		EDB4DAC42976A28300F48EE7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDB4DAC62976A34000F48EE7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTest.swift; sourceTree = "<group>"; };
+		EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 				ED63BB1A2976D607008351E4 /* Configuration */,
 				ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */,
 				ED63BB182976D5F0008351E4 /* MockCoreDataStack.swift */,
+				EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -384,7 +387,7 @@
 			children = (
 				ED63BB172976D5E7008351E4 /* Mock */,
 				ED63BB1D2976D763008351E4 /* DataSources */,
-				EDB4DAA029769E1F00F48EE7 /* iPhotoSchoolTests.swift */,
+				EDE9FEE8297B332700E497A9 /* UI */,
 				ED63BB242976D868008351E4 /* TestHelpers.swift */,
 			);
 			path = iPhotoSchoolTests;
@@ -451,6 +454,22 @@
 				ED5C80722977311D007CBF22 /* Async.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		EDE9FEE8297B332700E497A9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EDE9FEE9297B333E00E497A9 /* LessonDetails */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EDE9FEE9297B333E00E497A9 /* LessonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */,
+			);
+			path = LessonDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -627,12 +646,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB4DAA129769E1F00F48EE7 /* iPhotoSchoolTests.swift in Sources */,
+				EDE9FEED297B33DB00E497A9 /* MockVideoRepository.swift in Sources */,
 				ED14604B297850E400A061C1 /* RemoteDataSource.swift in Sources */,
 				ED63BB192976D5F0008351E4 /* MockCoreDataStack.swift in Sources */,
 				ED63BB1C2976D607008351E4 /* Mock.swift in Sources */,
 				ED63BB232976D7AE008351E4 /* LessonsLocalDataSourceTests.swift in Sources */,
 				ED63BB222976D7AE008351E4 /* LocalDataSourceTests.swift in Sources */,
+				EDE9FEEB297B336B00E497A9 /* LessonDetailViewModelTest.swift in Sources */,
 				ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */,
 				ED14604D2978511B00A061C1 /* MockRemoteDataSource.swift in Sources */,
 			);

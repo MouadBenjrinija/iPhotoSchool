@@ -15,8 +15,8 @@ protocol LocalDataSource {
                              @escaping () -> NSFetchRequest<T.ManagedObject>)
                                 -> AnyPublisher<[T], Error>
   func insert<T: Persistable>(_ object: [T]) -> AnyPublisher<[T], Error>
-  func update<Result>(_ operation: @escaping DBOperation<Result>)
-                                -> AnyPublisher<Result, Error>
+  func update<T: Persistable>(_ operation: @escaping DBOperation<[T]>)
+                                -> AnyPublisher<[T], Error>
 }
 
 protocol Persistable: Equatable where ManagedObject: NSManagedObject {
@@ -103,9 +103,9 @@ extension CoreDataStack: LocalDataSource {
       .eraseToAnyPublisher()
   }
 
-func update<Result>(_ operation: @escaping DBOperation<Result>)
-    -> AnyPublisher<Result, Error> {
-  let future = Future<Result, Error> { [weak container, weak backgroundQueue] promise in
+  func update<T: Persistable>(_ operation: @escaping DBOperation<[T]>)
+    -> AnyPublisher<[T], Error> {
+  let future = Future<[T], Error> { [weak container, weak backgroundQueue] promise in
     backgroundQueue?.async {
       guard let context = container?.newBackgroundContext() else { return }
       context.configureAsUpdateContext()

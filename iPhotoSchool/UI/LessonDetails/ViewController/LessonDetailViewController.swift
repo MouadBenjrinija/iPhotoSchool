@@ -17,14 +17,10 @@ class LessonDetailViewController: UIViewController {
   @IBOutlet weak var nextButton: UIButton!
   @IBOutlet weak var startButton: UIButton!
 
-  var downloadButton = DownloadButton()
-
   var viewModel: LessonDetailViewModel!
-
-  let videoRepository = Composer.videoRepository()
+  var downloadButton = DownloadButton()
+  var playerViewController = AVPlayerViewController()
   var bag = Set<AnyCancellable>()
-
-  private var playerViewController = AVPlayerViewController()
 
   func configure(lesson: Lesson, onNext: (() -> Void)?) {
     viewModel.lesson = lesson
@@ -53,14 +49,10 @@ class LessonDetailViewController: UIViewController {
   }
 
   func bindViewModel() {
-    viewModel.$lesson
-      .compactMap{ $0 }
-      .map(\.name)
+    viewModel.name
       .assign(to: \.text, on: nameLabel)
       .store(in: &bag)
-    viewModel.$lesson
-      .compactMap{ $0 }
-      .map(\.description)
+    viewModel.description
       .assign(to: \.text, on: descriptionLabel)
       .store(in: &bag)
     viewModel.$videoURL
@@ -72,10 +64,9 @@ class LessonDetailViewController: UIViewController {
       .sink(receiveValue: { state in
         self.downloadButton.configure(state: state)
       }).store(in: &bag)
-    viewModel.$onNext
-      .sink(receiveValue: { onNext in
-        self.nextButton.isHidden = onNext == nil
-      }).store(in: &bag)
+    viewModel.isNextButtonHidden
+      .assign(to: \.isHidden, on: nextButton)
+      .store(in: &bag)
     viewModel.$playerState
       .removeDuplicates()
       .sink(receiveValue: {[weak self] state in

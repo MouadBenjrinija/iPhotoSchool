@@ -30,7 +30,7 @@ final class TestLessonsLocalDataSource: XCTestCase {
     let stub = Stub.lessons
     var results: [Lesson]?
     mockDataStack.recorder = .init(expected: [
-      .insert("\(Lesson.self)", .init(inserted: stub.count, updated: 0, deleted: 0))
+      .update("\(Lesson.self)", .init(inserted: stub.count, updated: 0, deleted: 0))
     ])
     let expectation = expectation(description: #function)
 
@@ -73,4 +73,36 @@ final class TestLessonsLocalDataSource: XCTestCase {
     XCTAssertEqual(results!.count, stub.count, "Result count doesn't match")
   }
 
+  func test_deleteLessons_success() throws {
+    // Given
+    let stub = Stub.lessons
+    let persistable = stub.map { LessonPersistable(lesson: $0) }
+    var results: [Lesson]?
+    try mockDataStack.preload(persistable)
+    mockDataStack.recorder = .init(expected: [
+      .update("\(Lesson.self)",
+        .init(inserted: 0, updated: 0, deleted: stub.count)),
+      .fetch("\(Lesson.self)",
+        .init(inserted: 0, updated: 0, deleted: 0))
+    ])
+    let expectations = expectation(description: #function)
+
+    // When
+    sut.deleteAll()
+      .sinkToResult { deleteResult in
+        deleteResult.assertSuccess()
+        self.sut.loadLessons()
+          .sinkToResult { result in
+            result.assertSuccess()
+            results = try? result.get()
+            expectations.fulfill()
+          }.store(in: &self.subs)
+      }.store(in: &subs)
+
+    wait(for: [expectations], timeout: 0.1)
+
+    // Then
+    mockDataStack.verify()
+    XCTAssertEqual(results!.count, 0, "Result count doesn't match")
+  }
 }

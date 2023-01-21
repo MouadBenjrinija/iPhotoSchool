@@ -9,7 +9,7 @@ import UIKit
 
 class DownloadButton: UIView {
 
-  enum State {
+  enum State: Equatable {
     case normal
     case downloading(progress: Int)
     case downloaded
