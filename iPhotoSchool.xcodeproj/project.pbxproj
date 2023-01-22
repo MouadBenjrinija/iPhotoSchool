@@ -53,6 +53,8 @@
 		EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */; };
 		EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC42976A28300F48EE7 /* Constants.swift */; };
 		EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC62976A34000F48EE7 /* Authentication.swift */; };
+		EDD14E2A297D7C34000831EF /* Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14E29297D7C34000831EF /* Fake.swift */; };
+		EDD14E30297D82AE000831EF /* LessonDetailScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD14E2F297D82AE000831EF /* LessonDetailScreenTest.swift */; };
 		EDE9FEEB297B336B00E497A9 /* LessonDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */; };
 		EDE9FEED297B33DB00E497A9 /* MockVideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */; };
 		EDE9FEF8297C69AF00E497A9 /* LessonListScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEF7297C69AF00E497A9 /* LessonListScreenTest.swift */; };
@@ -119,6 +121,8 @@
 		EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		EDB4DAC42976A28300F48EE7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EDB4DAC62976A34000F48EE7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		EDD14E29297D7C34000831EF /* Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake.swift; sourceTree = "<group>"; };
+		EDD14E2F297D82AE000831EF /* LessonDetailScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailScreenTest.swift; sourceTree = "<group>"; };
 		EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTest.swift; sourceTree = "<group>"; };
 		EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoRepository.swift; sourceTree = "<group>"; };
 		EDE9FEF7297C69AF00E497A9 /* LessonListScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListScreenTest.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 			children = (
 				ED63BB292976D8EF008351E4 /* lessons.json */,
 				ED63BB272976D8AB008351E4 /* Stub.swift */,
+				EDD14E29297D7C34000831EF /* Fake.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */,
+				EDD14E2F297D82AE000831EF /* LessonDetailScreenTest.swift */,
 			);
 			path = LessonDetails;
 			sourceTree = "<group>";
@@ -592,6 +598,7 @@
 				ED77DD742979B19B00A3B242 /* RemoteVideoSource.swift in Sources */,
 				ED5C80692976FD64007CBF22 /* Composer.swift in Sources */,
 				ED5C808129781C22007CBF22 /* RemoteImageSource.swift in Sources */,
+				EDD14E2A297D7C34000831EF /* Fake.swift in Sources */,
 				EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */,
 				EDB4DAC52976A28300F48EE7 /* Constants.swift in Sources */,
 				ED77DD7C297AA55900A3B242 /* LessonDetailViewModel.swift in Sources */,
@@ -620,6 +627,7 @@
 				EDE9FEEB297B336B00E497A9 /* LessonDetailViewModelTest.swift in Sources */,
 				ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */,
 				ED14604D2978511B00A061C1 /* MockRemoteDataSource.swift in Sources */,
+				EDD14E30297D82AE000831EF /* LessonDetailScreenTest.swift in Sources */,
 				EDE9FEFC297C6B4400E497A9 /* MockLessonRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

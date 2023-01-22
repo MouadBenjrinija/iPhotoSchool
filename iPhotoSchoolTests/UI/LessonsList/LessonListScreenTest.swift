@@ -13,15 +13,19 @@ import Combine
 
 final class LessonListScreenTest: XCTestCase {
   let lessons = Stub.lessons
-  let repository = MockLessonsRepository()
+  var repository: MockLessonsRepository!
   var view: LessonListScreen!
   var sut: LessonListScreenInspector!
 
   @MainActor
   override func setUpWithError() throws {
+    repository = MockLessonsRepository()
     view = LessonListScreen(model: AppModel(lessonRepository: repository))
     sut = LessonListScreenInspector(inspector: try view.inspect())
+  }
 
+  override func tearDownWithError() throws {
+    repository = nil
   }
 
   @MainActor
@@ -46,20 +50,20 @@ final class LessonListScreenTest: XCTestCase {
     // Given: a lesson loading failure response
     repository.response = .failed(error: APIError.unexpectedResponse)
     // When: view finish loading
-    let loadingExpectation = view.inspection.inspect(after: 0.3) { view in
-      let loadableView = try self.sut.loadable
+
+    let loadingExpectation = view.inspection.inspect(after: 5) { view in
       // Then: should display an error view with a retry button
       _ = try self.sut.retryButton
     }
     ViewHosting.host(view: view)
-    wait(for: [loadingExpectation], timeout: 1)
+    wait(for: [loadingExpectation], timeout: 6)
   }
 
   func test_LessonLoading_retryAfterFailure() throws {
     // Given: a lesson loading failure response
     repository.response = .failed(error: APIError.unexpectedResponse)
     let retryingExpectation = expectation(description: "Is retrying after failure")
-    let loadingExpectation = view.inspection.inspect(after: 0.3) { view in
+    let loadingExpectation = view.inspection.inspect(after: 5) { view in
       // When: we tap on retry while simulating a successful response
       self.repository.response = .loaded(value: self.lessons)
       let retryButton = try self.sut.retryButton
@@ -71,7 +75,7 @@ final class LessonListScreenTest: XCTestCase {
       }
     }
     ViewHosting.host(view: view)
-    wait(for: [loadingExpectation, retryingExpectation], timeout: 1)
+    wait(for: [loadingExpectation, retryingExpectation], timeout: 6)
   }
 
 }

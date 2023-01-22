@@ -13,7 +13,6 @@ class MockLessonsRepository: LessonsRepository {
   var response: Loadable<[Lesson]> = .notLoaded
 
   func fetchLessons() async -> Loadable<[Lesson]> {
-    print("loaded", response.value?.count)
     return response
   }
 }

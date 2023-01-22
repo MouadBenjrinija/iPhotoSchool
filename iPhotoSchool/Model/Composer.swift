@@ -5,7 +5,13 @@
 //  Created by MOUAD BENJRINIJA on 17/1/2023.
 //
 
-import Foundation 
+import Foundation
+
+// For test purposes
+struct Env {
+  static let isRunningTests = ProcessInfo.processInfo.environment["isRunningTests"] != nil
+  static let useFake = ProcessInfo.processInfo.environment["useFake"] != nil
+}
 
 protocol Composing {
   @MainActor
@@ -15,8 +21,7 @@ protocol Composing {
 }
 
 class Composer: Composing {
-  static var shared: Composing = Composer()
-  private init() {}
+  static var shared: Composing = Env.useFake ? FakeComposer() : Composer()
 
   func appModel() -> AppModel {
     let lessonsRemoteDataSource = LessonsRemoteDataSourceMain(session: .default)

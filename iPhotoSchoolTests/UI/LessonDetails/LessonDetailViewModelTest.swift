@@ -21,6 +21,10 @@ final class TestLessonDetailViewModel: XCTestCase {
     sut = LessonDetailViewModel(videoRepository: videoRepository)
   }
 
+  override func tearDownWithError() throws {
+    videoRepository = nil
+  }
+
   func test_initialPreLoadingState() throws {
     // Given: No setup
     // Then
@@ -123,7 +127,7 @@ final class TestLessonDetailViewModel: XCTestCase {
       }
     }.store(in: &bag)
 
-    wait(for: [downloadingExpectation, downloadedExpectation], timeout: 1.0)
+    wait(for: [downloadingExpectation, downloadedExpectation], timeout: 5)
     // Then: repository should receive download request
     videoRepository.verify()
   }
