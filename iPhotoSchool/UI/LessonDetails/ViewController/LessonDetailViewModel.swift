@@ -24,7 +24,7 @@ class LessonDetailViewModel {
   
   private let videoRepository: VideoRepository
   var downloadCancellable: AnyCancellable?
-  var bag = Set<AnyCancellable>()
+  var bag = DisposeBag()
 
   var name: AnyPublisher<String?, Never> {
     $lesson
@@ -106,5 +106,10 @@ class LessonDetailViewModel {
 
   func cancelDownload() {
     videoRepository.cancelDownload()
+  }
+
+  func dispose() {
+    bag.dispose()
+    downloadCancellable?.cancel()
   }
 }

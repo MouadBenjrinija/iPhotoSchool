@@ -56,22 +56,24 @@ final class LessonDetailScreenTest: XCTestCase {
   func test_DownloadButton_State() throws {
     // Given: any lesson passed
     viewModel.lesson = lessons[0]
-
+    // hold reference here as there is no navigation bar
+    let downloadButton = DownloadButton()
+    sut.downloadButton = downloadButton
     // When: the video is not downloaded
     viewModel.downloadState = .normal
     // Then: nav bar button should show a download button
-    XCTAssertFalse(sut.downloadButton.downloadButton.isHidden)
+    XCTAssertFalse(downloadButton.downloadButton.isHidden)
 
     // When: the video is downloading
     viewModel.downloadState = .downloading(progress: 25)
     // Then: nav bar button should show the download progress
-    XCTAssertFalse(sut.downloadButton.downloadingButton.isHidden)
-    XCTAssertEqual(sut.downloadButton.downloadingButton.currentProgress, 0.25)
+    XCTAssertFalse(downloadButton.downloadingButton.isHidden)
+    XCTAssertEqual(downloadButton.downloadingButton.currentProgress, 0.25)
 
     // When: the video is not downloaded
     viewModel.downloadState = .downloaded
     // Then: nav bar button should show a download button
-    XCTAssertFalse(sut.downloadButton.downloadedButton.isHidden)
+    XCTAssertFalse(downloadButton.downloadedButton.isHidden)
   }
 
   func test_Player_StartPlaying() throws {

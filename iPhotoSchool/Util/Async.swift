@@ -42,3 +42,11 @@ internal final class Inspection<V> {
         }
     }
 }
+
+typealias DisposeBag = Set<AnyCancellable>
+extension DisposeBag {
+    mutating func dispose() {
+        forEach { $0.cancel() }
+        removeAll()
+    }
+}

@@ -48,7 +48,6 @@ class CoreDataStack {
   public let container = NSPersistentContainer(name: name)
   public let isStoreLoaded = CurrentValueSubject<Bool, Error>(false)
   private let backgroundQueue = DispatchQueue(label: "coredata")
-  private var subscribers = Set<AnyCancellable>()
 
   public init(storeDescription: NSPersistentStoreDescription? = nil) {
     if let storeDescription = storeDescription {

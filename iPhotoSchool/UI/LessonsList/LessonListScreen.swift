@@ -11,6 +11,7 @@ import Combine
 struct LessonListScreen: View {
   @ObservedObject var model: AppModel
   @State var lessonDetailPath: [Lesson] = []
+  var didLoadLessons: Bool { model.lessons.value != nil }
   internal let inspection = Inspection<Self>() // for test
 
   var body: some View {
@@ -21,20 +22,19 @@ struct LessonListScreen: View {
             LessonItemView(lesson: lesson)
           }.foregroundColor(.accentColor)
         }.listStyle(.plain)
+        .refreshable { fetchLessons() }
       }
       .navigationTitle("Lessons")
       .navigationDestination(for: Lesson.self) { lesson in
         LessonDetailScreen(lesson: lesson, onNext: onNext(lesson: lesson))
           .navigationBarTitleDisplayMode(.inline)
       }
-      .onAppear { fetchLessons() }
+      .onAppear { if !didLoadLessons { fetchLessons() } }
     }.onReceive(inspection.notice) { self.inspection.visit(self, $0) } // for test
   }
 
   func fetchLessons() {
-    Task {
-      await model.loadLessons()
-    }
+    Task { await model.loadLessons() }
   }
 
   func next(lesson: Lesson) -> Lesson? {
@@ -47,7 +47,9 @@ struct LessonListScreen: View {
 
   func onNext(lesson: Lesson) -> (() -> Void)? {
     guard let nextLesson = next(lesson: lesson) else { return nil }
-    return { lessonDetailPath = [nextLesson] }
+    return { [nextLesson] in
+      lessonDetailPath = [nextLesson]
+    }
   }
 
 }

@@ -72,7 +72,9 @@ class DownloadButton: UIView {
 
   lazy var downloadingButton: LoadingButton = {
     let button = LoadingButton()
-    button.onCancel = self.cancelTapped
+    button.onCancel = { [weak self] in
+      self?.cancelTapped()
+    }
     return button
   }()
 

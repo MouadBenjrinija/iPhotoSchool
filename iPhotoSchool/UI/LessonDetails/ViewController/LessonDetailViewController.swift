@@ -18,9 +18,9 @@ class LessonDetailViewController: UIViewController {
   @IBOutlet weak var startButton: UIButton!
 
   var viewModel: LessonDetailViewModel!
-  var downloadButton = DownloadButton()
+  weak var downloadButton: DownloadButton?
   var playerViewController = AVPlayerViewController()
-  var bag = Set<AnyCancellable>()
+  var bag = DisposeBag()
 
   func configure(lesson: Lesson, onNext: (() -> Void)?) {
     viewModel.lesson = lesson
@@ -30,22 +30,26 @@ class LessonDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     createPlayer()
-    bindViewModel()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    playerViewController.player?.pause()
+    resetPlayer()
+    bag.dispose()
+    viewModel.dispose()
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    setNavBar(button: downloadButton)
+    setNavBarButton()
+    bindViewModel()
   }
 
-  func setNavBar(button: UIView) {
+  func setNavBarButton() {
+    let button = DownloadButton()
     self.navigationController?.navigationBar
         .topItem?.rightBarButtonItem = UIBarButtonItem(customView: button)
+    downloadButton = button
   }
 
   func bindViewModel() {
@@ -60,10 +64,6 @@ class LessonDetailViewController: UIViewController {
       .removeDuplicates()
       .sink(receiveValue: configurePlayer(with:))
       .store(in: &bag)
-    viewModel.$downloadState
-      .sink(receiveValue: { state in
-        self.downloadButton.configure(state: state)
-      }).store(in: &bag)
     viewModel.isNextButtonHidden
       .assign(to: \.isHidden, on: nextButton)
       .store(in: &bag)
@@ -79,9 +79,12 @@ class LessonDetailViewController: UIViewController {
           self?.startButton.isHidden = false
         }
       }).store(in: &bag)
-
-    downloadButton.onDownload = viewModel.downloadVideo
-    downloadButton.onCancel = viewModel.cancelDownload
+    viewModel.$downloadState
+      .sink(receiveValue: { state in
+        self.downloadButton?.configure(state: state)
+      }).store(in: &bag)
+    downloadButton?.onDownload = { [weak self] in self?.viewModel.downloadVideo() }
+    downloadButton?.onCancel = { [weak self] in self?.viewModel.cancelDownload() }
   }
 
   func createPlayer() {
