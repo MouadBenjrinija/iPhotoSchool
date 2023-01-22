@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct LoadableView<T, Content: View>: View {
-  var loadable: Loadable<T>
+  let loadable: Loadable<T>
+  let retry: (() -> Void)?
   @ViewBuilder let loadedView: (T) -> Content
 
   var body: some View {
@@ -32,7 +33,13 @@ struct LoadableView<T, Content: View>: View {
           .foregroundColor(.gray)
         Text("Unable to load!")
           .font(.caption)
+          .padding(1)
           .foregroundColor(.gray)
+        Button(action: { retry?() }) {
+          Text("Retry")
+            .font(.caption)
+            .padding(4)
+        }
       }
     case .loaded(let loadedValue, _):
       loadedView(loadedValue)

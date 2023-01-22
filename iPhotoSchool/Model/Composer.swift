@@ -7,9 +7,18 @@
 
 import Foundation 
 
-struct Composer {
+protocol Composing {
   @MainActor
-  static func appModel() -> AppModel {
+  func appModel() -> AppModel
+  func imageRepository() -> ImageRepository
+  func videoRepository() -> VideoRepository
+}
+
+class Composer: Composing {
+  static var shared: Composing = Composer()
+  private init() {}
+
+  func appModel() -> AppModel {
     let lessonsRemoteDataSource = LessonsRemoteDataSourceMain(session: .default)
     let lessonsLocalDataSource = LessonsLocalDataSourceMain(localDataSource: CoreDataStack())
     let lessonsRepository = LessonsRepositoryMain(
@@ -18,7 +27,7 @@ struct Composer {
     return AppModel(lessonRepository: lessonsRepository)
   }
 
-  static func imageRepository() -> ImageRepository {
+  func imageRepository() -> ImageRepository {
     let localImageSourceDisk = LocaLImageSourceDisk()
     let localImageSourceCache = LocalImageSourceMemory()
     let localImageRepository = LocalImageRepository(diskSource: localImageSourceDisk,
@@ -29,7 +38,7 @@ struct Composer {
     return imageRepository
   }
 
-  static func videoRepository() -> VideoRepository {
+  func videoRepository() -> VideoRepository {
     let remoteVideoSource = RemoteVideoSourceMain()
     let localVideoSource = LocalVideoSourceMain()
     let videoRepository = VideoRepositoryMain(remoteSource: remoteVideoSource,

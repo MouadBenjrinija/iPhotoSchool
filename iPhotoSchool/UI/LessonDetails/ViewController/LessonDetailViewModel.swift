@@ -47,7 +47,7 @@ class LessonDetailViewModel {
       .eraseToAnyPublisher()
   }
 
-  init(videoRepository: VideoRepository = Composer.videoRepository()) {
+  init(videoRepository: VideoRepository = Composer.shared.videoRepository()) {
     self.videoRepository = videoRepository
     setup()
   }

@@ -11,10 +11,11 @@ import Combine
 struct LessonListScreen: View {
   @ObservedObject var model: AppModel
   @State var lessonDetailPath: [Lesson] = []
+  internal let inspection = Inspection<Self>() // for test
 
   var body: some View {
     NavigationStack(path: $lessonDetailPath) {
-      LoadableView(loadable: model.lessons) { lessons in
+      LoadableView(loadable: model.lessons, retry: fetchLessons) { lessons in
         List(lessons) { lesson in
           NavigationLink(value: lesson) {
             LessonItemView(lesson: lesson)
@@ -26,9 +27,13 @@ struct LessonListScreen: View {
         LessonDetailScreen(lesson: lesson, onNext: onNext(lesson: lesson))
           .navigationBarTitleDisplayMode(.inline)
       }
-      .task {
-        await model.loadLessons()
-      }
+      .onAppear { fetchLessons() }
+    }.onReceive(inspection.notice) { self.inspection.visit(self, $0) } // for test
+  }
+
+  func fetchLessons() {
+    Task {
+      await model.loadLessons()
     }
   }
 
@@ -49,6 +54,6 @@ struct LessonListScreen: View {
 
 struct LessonListScreen_Previews: PreviewProvider {
   static var previews: some View {
-    LessonListScreen(model: Composer.appModel())
+    LessonListScreen(model: Composer.shared.appModel())
   }
 }

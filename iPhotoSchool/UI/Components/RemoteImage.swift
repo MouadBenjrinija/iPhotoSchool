@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct RemoteImage<Content: View, Placeholder: View>: View {
-  let repository = Composer.imageRepository()
+  let repository = Composer.shared.imageRepository()
   var url: String?
   var placeholder: () -> Placeholder
   var content: (Image) -> Content

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct iPhotoSchoolApp: App {
-  @StateObject var model = Composer.appModel()
+  @StateObject var model = Composer.shared.appModel()
   let isRunningTests = ProcessInfo.processInfo.environment["isRunningTests"] != nil
 
   var body: some Scene {

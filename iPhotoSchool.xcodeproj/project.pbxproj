@@ -48,8 +48,6 @@
 		EDB4DA8B29769E1C00F48EE7 /* iPhotoSchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DA8A29769E1C00F48EE7 /* iPhotoSchoolApp.swift */; };
 		EDB4DA8F29769E1E00F48EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */; };
 		EDB4DA9229769E1E00F48EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */; };
-		EDB4DAAB29769E1F00F48EE7 /* iPhotoSchoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */; };
-		EDB4DAAD29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */; };
 		EDB4DABD2976A14200F48EE7 /* LessonsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */; };
 		EDB4DAC12976A20100F48EE7 /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DABF2976A20100F48EE7 /* RemoteCall.swift */; };
 		EDB4DAC22976A20100F48EE7 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */; };
@@ -57,17 +55,13 @@
 		EDB4DAC72976A34000F48EE7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DAC62976A34000F48EE7 /* Authentication.swift */; };
 		EDE9FEEB297B336B00E497A9 /* LessonDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */; };
 		EDE9FEED297B33DB00E497A9 /* MockVideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */; };
+		EDE9FEF8297C69AF00E497A9 /* LessonListScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEF7297C69AF00E497A9 /* LessonListScreenTest.swift */; };
+		EDE9FEFC297C6B4400E497A9 /* MockLessonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FEFB297C6B4400E497A9 /* MockLessonRepository.swift */; };
+		EDE9FF05297C6F0E00E497A9 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = EDE9FF04297C6F0E00E497A9 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		EDB4DA9D29769E1F00F48EE7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDB4DA7F29769E1C00F48EE7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDB4DA8629769E1C00F48EE7;
-			remoteInfo = iPhotoSchool;
-		};
-		EDB4DAA729769E1F00F48EE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDB4DA7F29769E1C00F48EE7 /* Project object */;
 			proxyType = 1;
@@ -120,9 +114,6 @@
 		EDB4DA8E29769E1E00F48EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDB4DA9129769E1E00F48EE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoSchoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolUITests.swift; sourceTree = "<group>"; };
-		EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhotoSchoolUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EDB4DABC2976A14200F48EE7 /* LessonsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsRemoteDataSource.swift; sourceTree = "<group>"; };
 		EDB4DABF2976A20100F48EE7 /* RemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
 		EDB4DAC02976A20100F48EE7 /* RemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
@@ -130,6 +121,8 @@
 		EDB4DAC62976A34000F48EE7 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTest.swift; sourceTree = "<group>"; };
 		EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoRepository.swift; sourceTree = "<group>"; };
+		EDE9FEF7297C69AF00E497A9 /* LessonListScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListScreenTest.swift; sourceTree = "<group>"; };
+		EDE9FEFB297C6B4400E497A9 /* MockLessonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLessonRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,13 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDB4DAA329769E1F00F48EE7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EDE9FF05297C6F0E00E497A9 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +270,7 @@
 				ED14604C2978511B00A061C1 /* MockRemoteDataSource.swift */,
 				ED63BB182976D5F0008351E4 /* MockCoreDataStack.swift */,
 				EDE9FEEC297B33DB00E497A9 /* MockVideoRepository.swift */,
+				EDE9FEFB297C6B4400E497A9 /* MockLessonRepository.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -344,7 +332,6 @@
 			children = (
 				EDB4DA8929769E1C00F48EE7 /* iPhotoSchool */,
 				EDB4DA9F29769E1F00F48EE7 /* iPhotoSchoolTests */,
-				EDB4DAA929769E1F00F48EE7 /* iPhotoSchoolUITests */,
 				EDB4DA8829769E1C00F48EE7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -354,7 +341,6 @@
 			children = (
 				EDB4DA8729769E1C00F48EE7 /* iPhotoSchool.app */,
 				EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */,
-				EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -391,15 +377,6 @@
 				ED63BB242976D868008351E4 /* TestHelpers.swift */,
 			);
 			path = iPhotoSchoolTests;
-			sourceTree = "<group>";
-		};
-		EDB4DAA929769E1F00F48EE7 /* iPhotoSchoolUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EDB4DAAA29769E1F00F48EE7 /* iPhotoSchoolUITests.swift */,
-				EDB4DAAC29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift */,
-			);
-			path = iPhotoSchoolUITests;
 			sourceTree = "<group>";
 		};
 		EDB4DAB92976A10700F48EE7 /* DataSources */ = {
@@ -459,6 +436,7 @@
 		EDE9FEE8297B332700E497A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EDE9FEF6297C698E00E497A9 /* LessonsList */,
 				EDE9FEE9297B333E00E497A9 /* LessonDetails */,
 			);
 			path = UI;
@@ -470,6 +448,14 @@
 				EDE9FEEA297B336B00E497A9 /* LessonDetailViewModelTest.swift */,
 			);
 			path = LessonDetails;
+			sourceTree = "<group>";
+		};
+		EDE9FEF6297C698E00E497A9 /* LessonsList */ = {
+			isa = PBXGroup;
+			children = (
+				EDE9FEF7297C69AF00E497A9 /* LessonListScreenTest.swift */,
+			);
+			path = LessonsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +474,8 @@
 			dependencies = (
 			);
 			name = iPhotoSchool;
+			packageProductDependencies = (
+			);
 			productName = iPhotoSchool;
 			productReference = EDB4DA8729769E1C00F48EE7 /* iPhotoSchool.app */;
 			productType = "com.apple.product-type.application";
@@ -506,27 +494,12 @@
 				EDB4DA9E29769E1F00F48EE7 /* PBXTargetDependency */,
 			);
 			name = iPhotoSchoolTests;
+			packageProductDependencies = (
+				EDE9FF04297C6F0E00E497A9 /* ViewInspector */,
+			);
 			productName = iPhotoSchoolTests;
 			productReference = EDB4DA9C29769E1F00F48EE7 /* iPhotoSchoolTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EDB4DAA529769E1F00F48EE7 /* iPhotoSchoolUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EDB4DAB629769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchoolUITests" */;
-			buildPhases = (
-				EDB4DAA229769E1F00F48EE7 /* Sources */,
-				EDB4DAA329769E1F00F48EE7 /* Frameworks */,
-				EDB4DAA429769E1F00F48EE7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EDB4DAA829769E1F00F48EE7 /* PBXTargetDependency */,
-			);
-			name = iPhotoSchoolUITests;
-			productName = iPhotoSchoolUITests;
-			productReference = EDB4DAA629769E1F00F48EE7 /* iPhotoSchoolUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -545,10 +518,6 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = EDB4DA8629769E1C00F48EE7;
 					};
-					EDB4DAA529769E1F00F48EE7 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = EDB4DA8629769E1C00F48EE7;
-					};
 				};
 			};
 			buildConfigurationList = EDB4DA8229769E1C00F48EE7 /* Build configuration list for PBXProject "iPhotoSchool" */;
@@ -560,13 +529,15 @@
 				Base,
 			);
 			mainGroup = EDB4DA7E29769E1C00F48EE7;
+			packageReferences = (
+				EDE9FF03297C6F0E00E497A9 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = EDB4DA8829769E1C00F48EE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */,
 				EDB4DA9B29769E1F00F48EE7 /* iPhotoSchoolTests */,
-				EDB4DAA529769E1F00F48EE7 /* iPhotoSchoolUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -584,13 +555,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EDB4DA9A29769E1F00F48EE7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDB4DAA429769E1F00F48EE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -647,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE9FEED297B33DB00E497A9 /* MockVideoRepository.swift in Sources */,
+				EDE9FEF8297C69AF00E497A9 /* LessonListScreenTest.swift in Sources */,
 				ED14604B297850E400A061C1 /* RemoteDataSource.swift in Sources */,
 				ED63BB192976D5F0008351E4 /* MockCoreDataStack.swift in Sources */,
 				ED63BB1C2976D607008351E4 /* Mock.swift in Sources */,
@@ -655,15 +620,7 @@
 				EDE9FEEB297B336B00E497A9 /* LessonDetailViewModelTest.swift in Sources */,
 				ED63BB252976D868008351E4 /* TestHelpers.swift in Sources */,
 				ED14604D2978511B00A061C1 /* MockRemoteDataSource.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDB4DAA229769E1F00F48EE7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDB4DAAB29769E1F00F48EE7 /* iPhotoSchoolUITests.swift in Sources */,
-				EDB4DAAD29769E1F00F48EE7 /* iPhotoSchoolUITestsLaunchTests.swift in Sources */,
+				EDE9FEFC297C6B4400E497A9 /* MockLessonRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,11 +631,6 @@
 			isa = PBXTargetDependency;
 			target = EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */;
 			targetProxy = EDB4DA9D29769E1F00F48EE7 /* PBXContainerItemProxy */;
-		};
-		EDB4DAA829769E1F00F48EE7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EDB4DA8629769E1C00F48EE7 /* iPhotoSchool */;
-			targetProxy = EDB4DAA729769E1F00F48EE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -899,42 +851,6 @@
 			};
 			name = Release;
 		};
-		EDB4DAB729769E1F00F48EE7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UZJUVD46BF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchoolUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iPhotoSchool;
-			};
-			name = Debug;
-		};
-		EDB4DAB829769E1F00F48EE7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UZJUVD46BF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.mowi.iPhotoSchoolUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iPhotoSchool;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -965,16 +881,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDB4DAB629769E1F00F48EE7 /* Build configuration list for PBXNativeTarget "iPhotoSchoolUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EDB4DAB729769E1F00F48EE7 /* Debug */,
-				EDB4DAB829769E1F00F48EE7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDE9FF03297C6F0E00E497A9 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				branch = 0.9.6;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDE9FF04297C6F0E00E497A9 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDE9FF03297C6F0E00E497A9 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ED63BB112976B8B6008351E4 /* iPhotoSchoolModel.xcdatamodeld */ = {
